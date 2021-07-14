@@ -7,6 +7,7 @@ Requirements
 This role requires:
 - a functional KVM host with configured network and storage
 - a prior download of RHEL cloud images in order to provision RHEL virtual machines
+- Terraform and terraform libvirt provider setup
 Role Variables
 --------------
 - vm_hostname: virtual machine template name
@@ -32,7 +33,7 @@ Example Playbook
     - hosts: KVMHost
       roles:
          - role:
-              name: hosninabil.kvmLinuxVM
+              name: hosninabil.kvmLinuxvm
            vars:
               dist: "centos"
               version: "8"
